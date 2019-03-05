@@ -1,0 +1,3 @@
+opencv_createsamples -img caneca.jpg -bg ./nao_canecas/bg.txt -info positivas/positivas.lst -maxxangle 0.5 maxyangle 0.5 maxzangle 0.5 -num 1800 -bgcolor 255
+opencv_createsamples.exe -info positivas/positivas.lst -num 85 -w 18 -h 18 -vec positivas.vec
+opencv_traincascade.exe -data classificador -vec positivas.vec -bg bg.txt -numPos 80 -numNeg 80 -numStages 10 -w 18 -h 18 -precalcBufSize 1024 -precalcIdxBufSize 1024
